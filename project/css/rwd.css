@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+  .course_introduction .box {
+    width: calc(100% - 30px);
+  }
+}
+
+@media (max-width: 500px) {
+  .header .top .logo{
+    padding: 15px;
+  }
+  .message .message_content {
+    flex-direction: column;
+  }
+  .footer .footer_img,
+  .footer .footer_text {
+    width: 100%;
+    text-align: center;
+  }
+  .footer .footer_text ul {
+    float: none;
+  }
+  .course_differences .table_scroll {
+    margin: 0px 15px;
+  }
+
+  /* 陰影 */
+  .course_differences .shadow_left:before,
+  .course_differences .shadow_right:after {
+    width: 20px;
+  }
+
+  .course_differences .shadow_left:before {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 197, 148, 0.25)), to(transparent));
+    background: linear-gradient(to right, rgba(0, 197, 148, 0.25) 0%, transparent 100%);
+  }
+
+  .course_differences .shadow_right:after {
+    background: -webkit-gradient(linear, right top, left top, from(rgba(0, 197, 148, 0.25)), to(transparent));
+    background: linear-gradient(to left, rgba(0, 197, 148, 0.25) 0%, transparent 100%);
+    right: 0;
+  }
+  /* end 陰影 */
+}

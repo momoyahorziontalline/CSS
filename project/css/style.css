@@ -1,0 +1,506 @@
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* end css reset */
+
+/* layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "微軟正黑體";
+  color: #333333;
+}
+
+.clearfix {
+  clear: both;
+  overflow: auto;
+  zoom: 1;
+}
+
+.header {
+  position: relative;
+}
+
+.w25 {
+  width: 25%;
+}
+
+.b50 {
+  margin-bottom: 50px;
+}
+
+.b80 {
+  margin-bottom: 80px;
+}
+
+select,
+input[type*="text"],
+input[type*="password"],
+input[type*="date"],
+textarea {
+  border: 1px solid #e1e1e1;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-family: "微軟正黑體";
+  font-size: 0.938em;
+  width: 100%;
+}
+
+input[type*="text"]:focus,
+textarea:focus,
+input[type*="password"]:focus {
+  background: #ccf5eb !important;
+  box-shadow: 0 14px 28px rgba(0, 197, 148, 0.25), 0 10px 10px rgba(0, 197, 148, 0.22);
+}
+/* end layout */
+
+
+/* footer */
+.footer {
+  padding: 15px 0px;
+}
+
+.footer .footer_img,
+.footer .footer_text {
+  display: inline-block;
+  width: calc(100% / 2 - 2px);
+}
+
+.footer .footer_text ul {
+  float: right;
+}
+.footer .footer_text ul li {
+  padding: 2px 0px;
+}
+.footer .footer_text ul li span {
+  color: #e12d80;
+}
+/* end footer */
+
+/* nav選單 */
+.header .nav_bg {
+  background: #f6f6f6;
+}
+
+.header .nav_bg ul.nav {
+  max-width: 1024px;
+  margin: auto;
+  text-align: right; /* 可讓文字向右邊靠 */
+  padding: 0;
+}
+
+.header .nav_bg ul.nav li {
+  display: inline-block;
+  padding: 10px 0px;
+  background: url(../img/line.jpg) left center no-repeat;
+}
+
+.header .nav_bg ul.nav li:first-child {
+  background: none;
+}
+
+.header .nav_bg ul.nav li a {
+  padding: 10px;
+  text-decoration: none;
+  font-size: 0.938em;
+}
+
+.header .nav_bg ul.nav li a.fb {
+  color: #4460a0;
+}
+
+.header .nav_bg ul.nav li a.twitter {
+  color: #00aaec;
+}
+
+.header .nav_bg ul.nav li a.fb:hover,
+.header .nav_bg ul.nav li a.fb:focus,
+.header .nav_bg ul.nav li a.twitter:hover,
+.header .nav_bg ul.nav li a.twitter:focus {
+  opacity: 0.8;
+  transform: all 0.3s;
+}
+/* end nav選單 */
+
+/* 主選單 */
+.header .top,
+.content,
+.footer {
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header .top .logo {
+  float: left;
+  padding-top: 10px;
+}
+.header .top ul.menu {
+  float: right;
+  padding-top: 10px;
+}
+
+.header .top ul.menu li {
+  display: inline-block;
+  font-size: 0.938em;
+  padding: 15px;
+  width: 100px;
+  text-align: center;
+  position: relative;
+}
+
+.header .top ul.menu li a {
+  text-decoration: none;
+  color: #00cc99;
+}
+
+.header .top ul.menu > li > a:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #00cc99;
+  transform-origin: 100% 50% 0;
+  transform: scale(0, 1);
+  -webkit-transition: -webkit-transform 0.65s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  transition: transform 0.65s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+.header .top ul.menu > li > a:hover:before {
+  transform-origin: 0% 50% 0;
+  transform: scale(1, 1);
+  -webkit-transition: -webkit-transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+
+.header .top ul.menu li a.active:before {
+  transform-origin: 0% 50% 0;
+  transform: scale(1, 1);
+  -webkit-transition: -webkit-transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+  transition: transform 0.45s cubic-bezier(0.165, 0.84, 0.44, 1) 0s;
+}
+/* end主選單 */
+
+/* banner */
+.content .banner {
+  margin: 0 auto;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background: #00cc99;
+  opacity: 0.5;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #00cc99;
+  width: 30px;
+  height: 11px;
+  box-shadow: 0px 0px 20px rgba(252, 56, 56, 0.3);
+}
+/* end banner */
+
+/* 課程介紹 */
+.course_introduction {
+  margin: 50px auto;
+}
+
+.course_introduction .box {
+  display: inline-block;
+  width: calc(100% / 3 - 35px);
+  text-align: center;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.16);
+  background: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 15px;
+}
+
+.course_introduction .box:hover {
+  box-shadow: 0 14px 28px rgba(0, 197, 148, 0.25), 0 10px 10px rgba(0, 197, 148, 0.22);
+}
+
+.course_introduction .box .box_img {
+  height: 136px;
+}
+
+.course_introduction .box h3 {
+  font-size: 1.125em;
+  padding: 10px 0px;
+}
+
+.course_introduction .box p {
+  line-height: 150%;
+  text-align: justify;
+  letter-spacing: -1px;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 15px 0px;
+}
+/* end課程介紹 */
+
+/* 線上及實體課程的差異 */
+.course_differences .table_scroll {
+  position: relative;
+  max-width: 1024px;
+  margin: auto;
+  overflow: hidden;
+}
+.course_differences .table_scroll:before,
+.course_differences .table_scroll:after {
+  top: 0;
+  width: 1px;
+  height: 100%;
+  content: "";
+  position: absolute;
+}
+
+.course_differences .table_wrap {
+  width: 100%;
+  overflow: auto;
+}
+.course_differences .table_wrap table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.course_differences .table_wrap td,
+.course_differences .table_wrap th {
+  padding: 15px;
+  background: #fff;
+  white-space: nowrap;
+  vertical-align: top;
+  width: 25%;
+}
+
+.course_differences .table_wrap tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.course_differences .table_wrap table thead th {
+  background: #f7f7f7;
+  font-weight: bold;
+  text-align: left;
+  border-top: 1px solid #ccc;
+}
+
+.course_differences .table_wrap th.first_col {
+  text-align: left;
+}
+
+.course_differences .table_wrap td.mark {
+  color: #00c594;
+}
+
+/* 捲軸 */
+.course_differences ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.course_differences ::-webkit-scrollbar-thumb {
+  background-color: #00c594;
+  border-radius: 10px;
+}
+/* end 捲軸 */
+/* end 線上及實體課程的差異 */
+
+/* 對我們課程有興趣嗎？ 歡迎留下您的資料 */
+.message {
+  background-image: linear-gradient(#00654b, #009771);
+  padding: 20px;
+  color: #fff;
+}
+
+.message h2 {
+  color: #fff;
+}
+
+.message .message_content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.message .message_content .message_textarea,
+.message .message_content .message_basicdate {
+  padding: 20px 20px 0px 20px;
+  width: 100%;
+}
+
+.message .message_content .message_basicdate li {
+  margin-bottom: 12px;
+}
+
+.message .message_content .message_basicdate li input {
+  margin: 5px 0px;
+}
+
+.message .message_content .message_basicdate li:last-child {
+  text-align: right;
+}
+
+.message .message_content .message_basicdate li .btn {
+  background: #00cc99;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  display: block; /*  重點  */
+  text-align: center;
+  float: right;
+  font-family: "微軟正黑體";
+}
+
+.message .message_content .message_basicdate li .btn:hover {
+  background: #9b9b9b;
+}
+/* end對我們課程有興趣嗎？ 歡迎留下您的資料 */
+
